@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- SCRIPT -->
+    <script src="JS/script.js" defer></script>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- THANK YOU MESSAGE -->
+      <div class="thank-you-content hidden">
+        <img
+          src="images/illustration-thank-you.svg"
+          class="thank-you-image"
+          alt="image illustration-thank-you"
+        />
+        <div class="selection">
+          <span class="selection__rating">You selected 4 out of 5</span>
+        </div>
+        <h2 class="thank-you-title">Thank you!</h2>
+        <p class="thank-you-paragraph">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <!-- RATING MESSAGE -->
+      <div class="wrapper__content">
+        <div class="wrapper__content-circle">
+          <img src="images/icon-star.svg" alt="Star Icon" />
+        </div>
+        <h2 class="wrapper__content-header">How did we do?</h2>
+        <p class="wrapper__content-paragraph">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <div class="ratings">
+          <button class="ratings__btn" data-rating="1">1</button>
+          <button class="ratings__btn" data-rating="2">2</button>
+          <button class="ratings__btn" data-rating="3">3</button>
+          <button class="ratings__btn" data-rating="4">4</button>
+          <button class="ratings__btn" data-rating="5">5</button>
+        </div>
+        <button class="submit__btn">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>

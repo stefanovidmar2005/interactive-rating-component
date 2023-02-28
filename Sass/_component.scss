@@ -1,0 +1,144 @@
+@import "variables";
+@import "mixin";
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $veryDark;
+  height: 80vh;
+  font-size: $default-font-size;
+  color: $white;
+  padding: 0 2.5rem;
+  font-family: $font-family;
+  .hidden {
+    display: none !important;
+  }
+  .active {
+    background-color: $primary-orange-color !important;
+    color: $white !important;
+  }
+  .wrapper {
+    background-color: hsl(215, 22%, 15%);
+    padding: 2.5rem;
+    border-radius: 10px;
+    max-width: 32.5rem;
+    @include desktop() {
+      max-width: 40rem;
+      padding: 3rem;
+    }
+    // Thank you message styles
+
+    .thank-you-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .thank-you-image {
+        margin-bottom: 3rem;
+      }
+      .selection {
+        background-color: $mediumDark;
+        padding: 0.95rem 1rem;
+        border-radius: 20px;
+        margin-bottom: 2.5rem;
+        span {
+          color: $primary-orange-color;
+          font-size: 1.6rem;
+        }
+      }
+      .thank-you-title {
+        margin-bottom: 1.5rem;
+        @include desktop() {
+          font-size: 2.8rem;
+        }
+      }
+      .thank-you-paragraph {
+        text-align: center;
+        line-height: 1.6;
+        font-size: 1.4rem;
+        color: $lightGrey;
+        @include desktop() {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    // RATING STYLES
+    &__content {
+      &-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-color: $mediumDark;
+        margin-bottom: 1.8rem;
+        @include desktop() {
+          margin-bottom: 2.6rem;
+        }
+      }
+      &-header {
+        font-weight: $fw-700;
+        margin-bottom: 1.5rem;
+        font-size: 2.5rem;
+        @include desktop() {
+          font-size: 2.8rem;
+        }
+      }
+      &-paragraph {
+        margin-bottom: 2rem;
+        color: $lightGrey;
+        line-height: 1.6;
+        font-size: 1.4rem;
+        @include desktop() {
+          font-size: 1.5rem;
+        }
+      }
+      .ratings {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        &__btn {
+          border: 0;
+          background-color: $mediumDark;
+          color: $lightGrey;
+          border-radius: 50%;
+          padding: 1.25rem 1.75rem;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          margin-bottom: 0.5rem;
+          @include desktop() {
+            padding: 1.75rem 2.25rem;
+            margin-bottom: 1rem;
+          }
+          &:hover {
+            color: $white;
+            background-color: $lightGrey;
+          }
+        }
+      }
+      .submit__btn {
+        width: 100%;
+        background-color: $primary-orange-color;
+        color: $white;
+        border: 0;
+        padding: 1.25rem 2rem;
+        border-radius: 20px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        @include desktop() {
+          padding: 1.3rem 2rem;
+        }
+        &:hover {
+          background-color: $white;
+          color: $primary-orange-color;
+        }
+      }
+    }
+  }
+}
