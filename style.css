@@ -42,6 +42,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: hsl(216deg, 12%, 8%);
   height: 80vh;
   font-size: 1.5rem;
@@ -190,6 +191,16 @@ body .wrapper__content .submit__btn {
 body .wrapper__content .submit__btn:hover {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(25deg, 97%, 53%);
+}
+body .me {
+  margin-top: 6rem;
+  text-decoration: none;
+  border-bottom: 3px dashed transparent;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+body .me:hover {
+  border-bottom: 3px dashed hsl(25deg, 97%, 53%);
 }
 
 /*# sourceMappingURL=style.css.map */
